@@ -1,3 +1,7 @@
+file_to_ignore
+.vscode/
+.pycharm/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
