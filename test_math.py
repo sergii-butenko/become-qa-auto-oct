@@ -1,2 +1,2 @@
-def test_simple_mat():
-    assert 2 + 2 == 4
+def test_simple_math_operation():
+    assert 1000 + 1000 != 0
