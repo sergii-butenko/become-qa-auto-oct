@@ -49,6 +49,7 @@ class Config:
         # BLOCK FOR REGISTERING THE PARAMETERS
         self._register("PARAMETER_JSON")
         self._register("PARAMETER_ENV")
+        self._register("USER_NAME")
 
     def get(self, item_name: str) -> Any:  # java
         # config.get("ITEM_NAME") - EXAMPLE OF CALL in Java
