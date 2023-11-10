@@ -50,6 +50,7 @@ class Config:
         self._register("PARAMETER_JSON")
         self._register("PARAMETER_ENV")
         self._register("USER_NAME")
+        self._register("BROSWER_NAME")
 
     def get(self, item_name: str) -> Any:  # java
         # config.get("ITEM_NAME") - EXAMPLE OF CALL in Java

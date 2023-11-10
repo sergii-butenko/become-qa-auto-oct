@@ -4,6 +4,7 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
 from src.applications.github.ui.github_ui import GitHubUILoginPage
+from src.helpers.browsers_provider import BrowserProvider
 
 
 def test_github_login_negative():
@@ -72,7 +73,10 @@ def test_github_login_negative_fixture(github_login):
 @pytest.fixture
 def github_login_page_object():
     # tear_up foreach
-    gitlab_login_page = GitHubUILoginPage()
+    BROWSER_NAME = 'ff_slow'
+    driver = BrowserProvider.get_driver(BROWSER_NAME)
+
+    gitlab_login_page = GitHubUILoginPage(driver)
     gitlab_login_page.navigate_to_page()
     
     # return login page

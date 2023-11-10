@@ -13,6 +13,7 @@ class ConfigEasy:
     request_timeout = 29
     user_name = os.environ.get('USERNAME')  # or get it from elsewhere
     env = os.environ.get('BQA_ENV')
+    browser_name = os.environ.get('BROWSER_NAME')
 
 config = ConfigEasy()
 
