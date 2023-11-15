@@ -40,7 +40,7 @@ def github_login():
     # tear_up foreach
     # open the browser
     options = webdriver.ChromeOptions()
-    driver = webdriver.Remote(command_executor="http://192.168.1.111:4444/wd/hub", options=options)
+    driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", options=options)
 
     # navigate to login page
     driver.get("https://github.com/login")
