@@ -39,8 +39,12 @@ def test_github_login_negative():
 def github_login():
     # tear_up foreach
     # open the browser
-    options = webdriver.ChromeOptions()
-    driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", options=options)
+    if CONFIG.BROWSER == "remote": 
+        options = webdriver.ChromeOptions()
+        driver = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", options=options)
+    else:
+        pass
+        # use local 
 
     # navigate to login page
     driver.get("https://github.com/login")
